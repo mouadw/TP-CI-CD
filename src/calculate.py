@@ -19,6 +19,12 @@ class Number :
     def multiplication(number1, number2):
         return number1*number2
     
+    def division(number1, number2):
+        if number2 != 0:
+            return number1/number2
+        else : print("error!")
+
+        
 number1 = Number(5, 1)
 number2 = Number(1, 2)
 
