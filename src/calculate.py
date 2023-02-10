@@ -1,15 +1,33 @@
 from flask import Flask
 from flask import request
 import sys
-import csv
-from flask import jsonify
 
 #Création de notre application flask
 app = Flask(__name__)
 
+class Number :
+    def __init__(self, number, id_number):
+        self.number = number
+        self.id_unumber = id_number
+    
+    def addition(number1,number2):
+        return number1 + number2
+    
+    def subsrtaction(number1, number2):
+        return number1 - number2
+    
+    def multiplication(number1, number2):
+        return number1*number2
+    
+number1 = Number(5, 1)
+number2 = Number(1, 2)
 
 
 
+
+app.route('/', methods=['GET'])
+def index():
+    print("addition(number1, number2)")
 
 #fonction main de notre projet qui permet d'executer notre Flask apllication.
 if __name__ == "__main__":
